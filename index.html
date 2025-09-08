@@ -127,7 +127,57 @@
             margin-left: auto;
             margin-right: auto;
         }
-    </style>
+    /* Post Navigation Styles */
+        .post-navigation {
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            gap: 10px; /* 링크 사이 간격 */
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .post-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .post-link:hover {
+            background-color: #e0e0e0;
+            color: #007bff;
+        }
+
+        .post-link .arrow {
+            font-size: 1.2em;
+            color: #007bff;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .post-link.prev {
+            justify-content: flex-start;
+        }
+
+        .post-link.next {
+            justify-content: flex-end;
+        }
+
+        .post-link.prev .arrow {
+            transform: none; /* ▲ 기본 방향 */
+            margin-left: -5px; /* 화살표가 더 붙도록 조정 */
+        }
+
+        .post-link.next .arrow {
+            transform: none; /* ▼ 기본 방향 */
+            margin-right: -5px; /* 화살표가 더 붙도록 조정 */
+        } </style>
 </head>
 <body>
 
@@ -166,7 +216,13 @@
             <p>이어 “<span class="strong-highlight">향후에도 지속적으로 제품의 품질 혁신을 통해 필터 기술로 인류의 건강한 삶에 기여한다는 경영방침을 실천해 나가겠다</span>”고 밝혔습니다.</p>
         </div>
     </div>
-</div>
+   <div class="post-navigation">
+        <a href="https://goodlight1234.github.io/news01/" class="post-link prev"><span class="arrow">▲</span> 시노펙스, 막여과 정수장에서 획득한 탄소 배출권 첫 판매 계약!
+ </a>
+        <a href="https://goodlight1234.github.io/news03/" class="post-link next">시노펙스, 세미콘 코리아에 반도체 공정용 첨단 필터 출품!<span class="arrow">▼</span></a>
+    </div>
+
+</div></div>
 
 </body>
 </html>
